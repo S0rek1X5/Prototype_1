@@ -2,10 +2,76 @@
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<div class="flex flex-row justify-center bg-blue-500">
+		<div class="bg-cyan-500 rounded-lg w-300 h-100"> /*container principal*/
+			<div class="flex flex-row justify-between">
+				<div class="">
+					<button class="bg-transparent hover:bg-gray-200 border-3 border-white-500 rounded-full text-white py-1 px-4">About us</button>
+					<button class="bg-transparent hover:bg-gray-200 border-3 border-white-500 rounded-full text-white py-1 px-4">Offer</button>
+					<button class="bg-transparent hover:bg-gray-200 border-3 border-white-500 rounded-full text-white py-1 px-4">Facilities</button>
+					<button class="bg-transparent hover:bg-gray-200 border-3 border-white-200 rounded-full text-white py-1 px-4">Membership</button>
+				</div>
+				<div class="header_container_2"><img class="w-20 h-10" src="src\assets\Logos.png" alt="Logo"/></div> // logo
+				<div class="header_container_3"></div> // buscador, menu, etc.
+			</div>
+
+			<div class="section_portal"></div>
+		</div>
+		
+		//hasta aqui
+
+		<div class="section_fontPage_1">
+			<div class="section_fontPage_1_container_1">
+			</div>
+			<div class="section_fontPage_1_container_2">
+			</div>
+			<div class="section_fontPage_1_container_3">
+			</div>
+		</div>
+
+		<div class="section_fontPage_2">
+			<div class="section_fontPage_2_container_1">
+			</div>
+			<div class="section_fontPage_2_container_2">
+			</div>
+		</div>
+
+		<div class="section_fontPage_3">
+			<div class="section_fontPage_3_container_1">
+			</div>
+			<div class="section_fontPage_3_container_2">
+			</div>
+			<div class="section_fontPage_3_container_3">
+			</div>
+		</div>
+
+		<div class="section_fontPage_4">
+			<div class="section_fontPage_4_container_1">
+			</div>
+			<div class="section_fontPage_4_container_2">
+			</div>
+		</div>
+
+		<div class="section_fontPage_5">
+			<div class="section_fontPage_5_container_1">
+			</div>
+			<div class="section_fontPage_5_container_2">
+				<div class="section_fontPage_5_sub_container_1">
+				</div>
+				<div class="section_fontPage_5_sub_container_2">
+				</div>
+			</div>
+		</div>
+		
+		<div class="section_fontPage_6">
+			<div class="section_fontPage_6_container_1">
+			</div>
+			<div class="section_fontPage_6_container_2">
+			</div>
+		</div>
+	</div>
+	<div class="footer"><div class="footer_container_1"></div> </div>
 </Layout>
