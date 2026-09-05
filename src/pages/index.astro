@@ -5,23 +5,60 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-	<div class="flex flex-row justify-center bg-blue-500">
-		<div class="bg-cyan-500 rounded-lg w-300 h-100"> /*container principal*/
-			<div class="flex flex-row justify-between">
-				<div class="">
-					<button class="bg-transparent hover:bg-gray-200 border-3 border-white-500 rounded-full text-white py-1 px-4">About us</button>
-					<button class="bg-transparent hover:bg-gray-200 border-3 border-white-500 rounded-full text-white py-1 px-4">Offer</button>
-					<button class="bg-transparent hover:bg-gray-200 border-3 border-white-500 rounded-full text-white py-1 px-4">Facilities</button>
-					<button class="bg-transparent hover:bg-gray-200 border-3 border-white-200 rounded-full text-white py-1 px-4">Membership</button>
+	<div class="flex flex-row justify-center bg-blue-500 px-60 py-10"> <!-- Este es un comentario en HTML -->
+		<div class="bg-cyan-500 rounded-lg w-300 h-195 px-10 py-5">
+			<div class="flex flex-row justify-between font-medium text-sm text-white">  <!--header-->
+				<div class="flex gap-3 items-center">
+					<a href="/About_us" class="inline-flex items-center justify-center bg-transparent hover:bg-gray-200 border-3 border-white-500 rounded-full px-4 py-1">
+						<span class="truncate">About Us</span>
+					</a>
+					<a href="/Offer" class="inline-flex items-center justify-center bg-transparent hover:bg-gray-200 border-3 border-white-500 rounded-full px-4 py-1">
+						<span class="truncate">Offer</span>
+					</a>
+					<a href="/Facilities" class="inline-flex items-center justify-center bg-transparent hover:bg-gray-200 border-3 border-white-500 rounded-full px-4 py-1">
+						<span class="truncate">Facilities</span>
+					</a>
+					<a href="/Membership" class="inline-flex items-center justify-center bg-transparent hover:bg-gray-200 border-3 border-white-200 rounded-full px-4 py-1">
+						<span class="truncate">Membership</span>
+					</a>
 				</div>
-				<div class="header_container_2"><img class="w-20 h-10" src="src\assets\Logos.png" alt="Logo"/></div> // logo
-				<div class="header_container_3"></div> // buscador, menu, etc.
+				<div class=""><img class="w-25 h-15" src="src\assets\Logos.png" alt="Logo"/></div>
+				<div class="flex justify-around items-center">
+					<form action="/search" method="GET" class="relative flex items-center">
+  						<input 
+    						type="text" 
+    						name="q"
+    						placeholder="Search here..." 
+    						class=" bg-transparent placeholder-white border-2 border-white rounded-full py-2 pl-6 pr-1 outline-none focus:ring-2 focus:ring-white/50 transition-all"
+  						/>
+  						<button 
+    						type="submit" 
+    						aria-label="Search"
+    						class="absolute right-1.5 flex items-center justify-center w-8 h-8 bg-white text-black rounded-full hover:bg-gray-200 transition-colors"
+  						>
+    						<svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      							<circle cx="11" cy="11" r="8"></circle>
+      							<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    						</svg>
+  						</button>
+					</form>
+					<a href="/Book_Now" class="inline-flex items-center gap-3 bg-black hover:bg-neutral-800 pl-4 pr-1 py-1 rounded-full transition-colors">
+						<span>Book Now</span>
+  						<span class="flex items-center justify-center w-8 h-8 bg-white text-black rounded-full">
+    						<svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      							<path d="M7 17L17 7"/>
+      							<path d="M7 7h10v10"/>
+    						</svg>
+  						</span>
+					</a>
+				
+				</div>
 			</div>
 
 			<div class="section_portal"></div>
 		</div>
 		
-		//hasta aqui
+		<!--hasta aqui-->
 
 		<div class="section_fontPage_1">
 			<div class="section_fontPage_1_container_1">
