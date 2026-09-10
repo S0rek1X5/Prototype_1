@@ -1,12 +1,12 @@
 ---
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
+import fondoImg from '../assets/fondo.png';
 ---
 
 <Layout>
-	<div class="flex flex-row justify-center bg-blue-500 px-55 py-10"> <!-- Este es un comentario en HTML -->
-		<div class="bg-cyan-500 rounded-lg w-300 h-195 px-10 py-5">
+	<div class="flex flex-row justify-center px-55 py-10"> <!-- Este es un comentario en HTML -->
+	<div class="bg-[url('/fondo.jpg')] bg-black/30 bg-blend-overlay bg-cover bg-center bg-no-repeat w-full rounded-3xl px-10 py-5 ">
 			<div class="flex flex-row justify-between font-medium text-sm text-white">  <!--header-->
 				<div class="flex gap-3 items-center">
 					<a href="/About_us" class="inline-flex items-center justify-center bg-transparent hover:bg-gray-200 border-3 border-white-500 rounded-full px-4 py-1">
@@ -22,7 +22,7 @@ import Layout from '../layouts/Layout.astro';
 						<span class="truncate">Membership</span>
 					</a>
 				</div>
-				<div class=""><img class="w-25 h-15" src="src\assets\Logos.png" alt="Logo"/></div>
+				<div class="absolute left-1/2 top-8 -translate-x-1/2 bg-white rounded-b-[3rem] px-6 pt-3 pb-5 flex flex-col items-center justify-center "><img class="w-25 h-15 rounded-full" src="src\assets\Logos.png" alt="Logo"/></div>
 				<div class="flex justify-around items-center gap-3">
 					<form action="/search" method="GET" class="relative flex items-center">
   						<input 
@@ -61,15 +61,15 @@ import Layout from '../layouts/Layout.astro';
 				</div>
 			</div>
 
-			<div class="flex flex-row justify-between bg-red-500 px-1 pt-25">
+			<div class="flex flex-row justify-between px-1 pt-25">
 				<div class="flex flex-col text-white font-normal text-sm"> <!--col1-->
-					<div class="flex flex-row w-fit p-1 bg-white/10 rounded-full -space-x-2">
+					<div class="flex flex-row w-fit p-1 bg-white/30 rounded-full -space-x-2">
 						<img class="w-10 h-10 rounded-full" src="src\assets\ryuki.jpg" alt="Trainers"/>
 						<img class="w-10 h-10 rounded-full" src="src\assets\ryuki.jpg" alt="Trainers"/>
 						<img class="w-10 h-10 rounded-full" src="src\assets\ryuki.jpg" alt="Trainers"/>
 					</div>
 					<p class="w-3xs text-sm/4 pt-2">We're committed to delivering a high-quality experience in a welcomming and spportive atmosphere.</p>
-					<p class="w-3xs py-5">All in one-sports facilities center</p>
+					<p class="w-3xs pt-5 pb-2">All in one-sports facilities center</p>
 					<a href="/membership" class="inline-flex items-center justify-center bg-black hover:bg-neutral-800 pl-4 pr-1 py-1 w-fit rounded-full transition-colors">
 						<span class="px-1">Join with us</span>
   						<span class="flex items-center justify-center w-7 h-7 bg-white text-black rounded-full">
@@ -79,11 +79,50 @@ import Layout from '../layouts/Layout.astro';
 							</svg>
   						</span>
 					</a>
+					<h1 class="py-10 pt-15 text-5xl w-xl leading-tight tracking-wider">Refresh,Relax and Rediscover Life's simple Pleasures</h1>
+					<h2 class="w-135 leading-tight">Rediscover the beauty in life's simplest pleasures, and let every moment here remind you of the joy of true relaxation.</h2>
+				
 				</div>
+			
 
+				<div class="flex items-end flex-col gap-y-5"> <!--col2-->
+					<div class="pb-30 gap-2 flex flex-col items-end text-black font-medium text-sm ">
+						<a href="/https://www.instagram.com/" class="w-fit px-5 bg-white hover:bg-gray-200 inline-flex justify-center p-2 rounded-full transition-colors">instagram</a>
+						<a href="/https://www.x.com/" class="w-fit px-5 bg-white hover:bg-gray-200 inline-flex justify-center p-2 rounded-full transition-colors">Twitter</a>
+						<a href="/https://www.facebook.com/" class="w-fit px-5 bg-white hover:bg-gray-200 inline-flex justify-center p-2 rounded-full transition-colors">Facebook</a>
+					</div>
+					<div class="text-white text-sm gap-3 bg-white/40 py-4 px-5 rounded-2xl">
+						<h1 class="font-medium text-2xl">Refer a friend</h1>
+						<h2 class="pb-9">share your referral link with friends</h2>
+						<div class="flex flex-row items-center gap-x-2 py-1 pb-1 rounded-full ">
+							<a href="/share" class="inline-flex items-center gap-3 bg-white hover:bg-gray-100 text-black text-md font-semibold px-5 py-2 h-fit rounded-full transition-colors shadow-sm">
+  								<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      								<circle cx="18" cy="5" r="3"></circle>
+      								<circle cx="6" cy="12" r="3"></circle>
+      								<circle cx="18" cy="19" r="3"></circle>
+      								<line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+      								<line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+    							</svg>
+    							<span class="text-black ">Share link</span>
+  							</a>
 
-				<div class=""> <!--col2-->
-					sdsd
+							<div class="flex flex-row w-fit p-1 bg-white/30 rounded-full -space-x-2">
+								<img class="w-10 h-10 rounded-full" src="src\assets\ryuki.jpg" alt="Trainers"/>
+								<img class="w-10 h-10 rounded-full" src="src\assets\ryuki.jpg" alt="Trainers"/>
+								<img class="w-10 h-10 rounded-full" src="src\assets\ryuki.jpg" alt="Trainers"/>
+								<img class="w-10 h-10 rounded-full" src="src\assets\ryuki.jpg" alt="Trainers"/>
+							</div>
+						</div>
+					</div>
+					<div class="gap-2 text-md font-normal text-black flex flex-col items-start bg-white/80 p-5 rounded-2xl">
+						<span class="leading-none w-20">Download our @App</span>
+						<a href="/download" download class="inline-flex items-center gap-3 bg-white hover:bg-gray-100 text-black font-semibold border border-black rounded-full px-3 py-1 h-fit transition-colors shadow-sm">
+  							<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<circle cx="12" cy="12" r="10"></circle><path d="M12 8v8"></path><path d="m8 12 4 4 4-4"></path>
+							</svg>
+  							<span>Download</span>
+						</a>
+					</div>
 				</div>
 			</div>  <!--container-->
 		</div>
