@@ -1,7 +1,7 @@
 ---
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-import fondoImg from '../assets/fondo.png';
+
 ---
 
 <Layout>
@@ -129,8 +129,8 @@ import fondoImg from '../assets/fondo.png';
 		
 		<!--hasta aqui-->
 
-		<div class="flex flex-row gap-x-10 font-medium pt-20">
-			<div class="flex items-start flex-col gap-y-3 text-black">
+		<div class="flex flex-row gap-x-10 font-medium pt-15 border-b-1 border-gray-300 pb-10">
+			<div class="flex items-start flex-col gap-y-3 text-black p-5">
 				<a href="/sportcenter" class="rounded-4xl border-3 border-gray-300 p-1 px-5	">
 					<span>Sports center</span>
 				</a>
@@ -145,9 +145,32 @@ import fondoImg from '../assets/fondo.png';
   					</span>
 				</a>
 			</div>
-			<div class="section_fontPage_1_container_2">
+			<div class="px-5 pt-5 pb-3  text-white font-medium flex flex-col items-start justify-between rounded-2xl bg-[url('/Skie.jpg')] bg-black/10 bg-blend-overlay bg-cover bg-center">
+				<a href="/sportcenter" class="rounded-4xl border-3 border-gray-300 p-1 px-5	">
+					<span>Sports center</span>
+				</a>
+				<div class="text-white font-medium flex flex-row gap-x-4">
+					<span class="w-58">Versatile space for a wide range of activities</span>
+					<a href="/membership" class="">
+  						<span class="flex items-center justify-center w-7 h-7 bg-black text-white rounded-full">
+							<svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+	  							<path d="M7 17L17 7"/>
+								<path d="M7 7h10v10"/>
+							</svg>
+  						</span>
+					</a>
+				</div>
 			</div>
-			<div class="section_fontPage_1_container_3">
+			<div class=" bg-[url('/cesped.jpg')] bg-cover bg-center bg-no-repeat rounded-2xl w-80 h-50">
+				<div class="flex flex-col p-5	flex items-start gap-y-25 text-white font-medium">
+					<a href="/sportcenter" class="rounded-4xl border-3 border-gray-300 p-1 px-5	">
+						<span>Sports center</span>
+					</a>
+					<h1>Futal court</h1>
+				</div>
+				<div class="flex flex-row justify-between">
+					<span class="w-60 leading-tight pt-2">Explore the ideal space to play, train, and reach new heights. Where passion meets</span>
+				</div>
 			</div>
 		</div>
 
