@@ -1,0 +1,72 @@
+---
+// src/components/Footer.astro
+---
+<footer class="bg-gray-200 text-black py-15 text-center justify-around">
+  <div class="grid grid-cols-5 pl-15 ">
+    <div class="grid grid-rows-3 ">
+        <div class="flex gap-x-5 items-center justify-start">
+            <img src="/src/assets/Logos.png" alt="Logo" class="w-15 h-10 inline-block rounded-4xl " />
+            <h1 class="text-xl font-semibold text-black">ProtoFitness</h1>
+        </div>
+        <h1 class=" justify-start text-xl text-left  font-bold text-black w-60 ">Your Play, Your Way-Modern Sports Facilities for Every Passion</h1>
+    </div>
+    <div class="grid grid-cols-1 text-left pl-10">
+        <h1 class="text-lg font-semibold text-black py-5">Facilities</h1>
+        <a href="/TennisCourts" class="text-black hover:text-gray-700">Tennis Courts</a>
+        <a href="/BasketballCourts" class="text-black hover:text-gray-700">Basketball Courts</a>
+        <a href="/FootballField" class="text-black hover:text-gray-700">Football Field</a>
+        <a href="/SwimmingPools" class="text-black hover:text-gray-700">Swimming Pools</a>
+        <a href="/GymFitness" class="text-black hover:text-gray-700">GymFitness</a>
+        <a href="/Center" class="text-black hover:text-gray-700">Center</a>
+        <a href="/Multi-purpose Hall" class="text-black hover:text-gray-700">Multi-purpose Hall</a>
+        <a href="/YogaStudio" class="text-black hover:text-gray-700">Yoga Studio</a>
+        <a href="/DanceStudio" class="text-black hover:text-gray-700">Zone</a>
+        <a href="/MartialArts" class="text-black hover:text-gray-700">Locker Rooms</a>
+    </div>
+    <div class="grid grid-cols-1 text-left content-start">
+        <h1 class="text-lg font-semibold text-black py-5">About</h1>
+        <a href="/AboutUs" class="text-black hover:text-gray-700">Our Mission</a>
+        <a href="/ContactUs" class="text-black hover:text-gray-700">Vision</a>
+        <a href="/Careers" class="text-black hover:text-gray-700">Community</a>
+    </div>
+    <div class="grid grid-cols-1 text-left content-start">
+        <h1 class="text-lg font-semibold text-black py-5">Social</h1>
+        <a href="/FAQ" class="text-black hover:text-gray-700">Instagram</a>
+        <a href="/ContactUs" class="text-black hover:text-gray-700">Facebook Us</a>
+        <a href="/PrivacyPolicy" class="text-black hover:text-gray-700">Linkedin</a>
+        <a href="/TermsOfService" class="text-black hover:text-gray-700">Youtube</a>
+    </div>
+    <div class="flex flex-col gap-y-4 w-full max-w-sm bg-transparent">
+  
+        <h3 class="text-lg font-medium text-black text-left">Join Us</h3>
+
+  
+        <input 
+            type="email" 
+            placeholder="Type your email..." 
+            class="w-full px-5 py-3.5 bg-white text-gray-800 placeholder-gray-400 rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black transition-all text-sm shadow-sm"/>
+
+        <input 
+            type="text" 
+            placeholder="Type your name here..." 
+            class="w-full px-5 py-3.5 bg-white text-gray-800 placeholder-gray-400 rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black transition-all text-sm shadow-sm"/>
+
+        <select class="w-full px-5 py-3.5 bg-white text-gray-400 rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black transition-all text-sm shadow-sm appearance-none cursor-pointer">
+            <option value="" disabled selected>Training Type</option>
+            <option value="option1">Opción 1</option>
+            <option value="option2">Opción 2</option>
+        </select>
+
+  
+          <button type="submit" class="w-full flex items-center justify-between px-6 py-2 bg-black text-white rounded-full hover:bg-gray-800 transition-all font-medium text-sm shadow-md group cursor-pointer">
+                <span>Book a Court</span>
+    
+                <span class="flex items-center justify-center w-8 h-8 bg-white text-black rounded-full transition-transform group-hover:scale-105">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10" />
+                    </svg>
+                </span>
+            </button>
+    </div>
+  </div>
+</footer>
