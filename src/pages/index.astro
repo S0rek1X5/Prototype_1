@@ -1,13 +1,14 @@
     ---
     import Layout from '../layouts/Layout.astro';
     import Footer from '../components/Footer.astro';
+    import Carousel from '../components/Carousel.astro';
     ---
 
     <Layout>
-        <!-- Contenedor principal responsive con padding adaptativo -->
+        
         <div class="flex flex-col justify-center px-4 sm:px-8 md:px-12 lg:px-20 py-6 lg:py-10">
             
-            <!-- Sección de Cabecera y Banner Principal con Fondo -->
+            
             <div class="flex flex-col bg-[url('/fondo.jpg')] bg-black/30 bg-blend-overlay bg-cover bg-center bg-no-repeat w-full rounded-3xl px-4 sm:px-8 py-6">
                 
                 <!-- Header adaptable -->
@@ -198,7 +199,21 @@
             </div>
 
 
-            <div class="md:flex-row py-5 mt-10 bg-gray-200 rounded-xl">
+
+
+            <div class="md:flex flex-row">
+                <Carousel/>
+                <div class="md:flex flex-wrap items-center p-5">
+                    <h1 class="text-3xl font-semibold ">Discover Excellence in Courts, Fields, and Beyond</h1>      
+                    <div class="rounded-2xl pt-5 md:flex flex-wrap justify-between min-h-[250px] md:col-span-2 sm:col-span-1">
+                        <img class="sm:w-40 sm:h-50 object-cover rounded-2xl" src="/fondo.jpg" alt="Logo"/>
+                        <p class="text-sm md:w-xs px-3 self-center">Our top-tier Sports facilities feature a range of courts and fields, including tennis, basketball and futball, perfect for both casual players and competitive athletes</p>
+                    </div>             
+                </div>  
+            </div>
+
+
+            <div class="md:flex-wrap py-5 mt-10 bg-gray-200 rounded-xl">
                 <div class="md:flex flex-row sm:gap-4 px-5 justify-between">
                     <div class="flex sm:flex-row sm:gap-4 py-5 items-center">
                         <a href="/Facilities" class="text-md items-start rounded-4xl border-3 border-gray-300 p-1 px-5 h-fit">
