@@ -1,37 +1,41 @@
 ---
 const baseUrl = import.meta.env.BASE_URL;
+import dep1 from '../assets/Dep_1.jpg';
+import dep2 from '../assets/Dep_2.jpg';
+import dep3 from '../assets/Dep_3.jpg';
+import dep4 from '../assets/Dep_4.jpg';
 
 const slides = [
     {
-        image: `${baseUrl}Dep_1.jpg`,
+        image: dep1.src,
         title: "We provide premium courts for both individual and group training",
         description: "Our advanced sports facilities boast diverse courts and fields for every athlete.",
         linkText: "Book a Court",
         linkUrl: "/sportcenter"
     },
     {
-        image: `${baseUrl}Dep_2.jpg`,
+        image: dep2.src,
         title: "Top-Tier Sports Facilities for Training",
         description: "Designed to help athletes reach their maximum potential with professional equipment.",
         linkText: "Explore More",
         linkUrl: "/sportcenter"
     },
     {
-        image: `${baseUrl}Dep_3.jpg`,
+        image: dep3.src,
         title: "Versatile Sports Facilities Designed for Performance",
         description: "Multi-purpose areas built to host competitions and casual matches alike.",
         linkText: "View Facilities",
         linkUrl: "/sportcenter"
     },
     {
-        image: `${baseUrl}Dep_4.jpg`,
+        image: dep4.src,
         title: "Professional Coaching & Training Zones",
         description: "Get personalized guidance from expert trainers in a world-class environment.",
         linkText: "Learn More",
         linkUrl: "/sportcenter"
     },
     {
-        image: `${baseUrl}Dep_1.jpg`,
+        image: dep1.src,
         title: "Exclusive Membership Benefits & Access",
         description: "Join our community and enjoy priority booking across all locations.",
         linkText: "Join Now",
@@ -40,49 +44,41 @@ const slides = [
 ];
 ---
 
-
-
-
 <main>
-
     <div class="bg-[#5a8267] p-8 rounded-3xl text-white lg:w-fit md:h-fit relative shadow-lg my-10">
         <div class="flex flex-col md:flex-row items-center gap-8">
-    
-    
-        <div class="md:w-sm md:h-sm">
-            <img id="carousel-img" src={slides[0].image} alt="Facility" class="rounded-2xl object-cover h-[300px] w-full shadow-md" />
-        </div>
-
-    
-        <div class="w-fit h-fit md:w-1/2 flex flex-col justify-between">
-            <div>
-                <h2 id="carousel-title" class="text-2xl md:text-3xl font-medium mb-4">{slides[0].title}</h2>
-                <p id="carousel-desc" class="text-gray-100 text-sm mb-8">{slides[0].description}</p>
+        
+            <div class="md:w-sm md:h-sm">
+                <!-- Se asigna la imagen inicial del array -->
+                <img id="carousel-img" src={slides[0].image} alt="Facility" class="rounded-2xl object-cover h-[300px] w-full shadow-md" />
             </div>
 
-            <div class="md:flex flex-col items-center justify-between">
-        
-                <a id="carousel-link" href={slides[0].linkUrl} class="self-start  sm:h-fit bg-black text-white px-3 py-2 rounded-full flex items-center gap-3 hover:bg-neutral-800 transition-colors">
-                    <span id="carousel-link-text">{slides[0].linkText}</span>
-                    <span class="bg-white text-black rounded-full p-1 w-6 h-6 flex items-center justify-center xs:text-xs">↗</span>
-                </a>
+            <div class="w-fit h-fit md:w-1/2 flex flex-col justify-between">
+                <div>
+                    <h2 id="carousel-title" class="text-2xl md:text-3xl font-medium mb-4">{slides[0].title}</h2>
+                    <p id="carousel-desc" class="text-gray-100 text-sm mb-8">{slides[0].description}</p>
+                </div>
 
-        
-                <div class="flex items-center gap-4">
-                    <span id="carousel-counter" class="text-sm font-medium">1/{slides.length}</span>
-                    <button id="prev-btn" aria-label="Anterior" class="bg-black text-white p-3 rounded-full hover:bg-neutral-800 transition-colors cursor-pointer">
-                    ←
-                    </button>
-                    <button id="next-btn" aria-label="Siguiente" class="bg-black text-white p-3 rounded-full hover:bg-neutral-800 transition-colors cursor-pointer">
-                    →
-                    </button>
+                <div class="md:flex flex-col items-center justify-between">
+                    <a id="carousel-link" href={slides[0].linkUrl} class="self-start sm:h-fit bg-black text-white px-3 py-2 rounded-full flex items-center gap-3 hover:bg-neutral-800 transition-colors">
+                        <span id="carousel-link-text">{slides[0].linkText}</span>
+                        <span class="bg-white text-black rounded-full p-1 w-6 h-6 flex items-center justify-center xs:text-xs">↗</span>
+                    </a>
+
+                    <div class="flex items-center gap-4 mt-4 md:mt-0">
+                        <span id="carousel-counter" class="text-sm font-medium">1/{slides.length}</span>
+                        <button id="prev-btn" aria-label="Anterior" class="bg-black text-white p-3 rounded-full hover:bg-neutral-800 transition-colors cursor-pointer">
+                        ←
+                        </button>
+                        <button id="next-btn" aria-label="Siguiente" class="bg-black text-white p-3 rounded-full hover:bg-neutral-800 transition-colors cursor-pointer">
+                        →
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
 
         </div>
     </div>
-
 
     <script define:vars={{ slides }}>
         let currentIndex = 0;
@@ -100,7 +96,7 @@ const slides = [
 
         function updateView(index) {
             const data = slides[index];
-            imgEl.src = data.image; // Aquí ya contiene la ruta absoluta con el BASE_URL correcto
+            imgEl.src = data.image; // Aquí se actualizará perfectamente con la ruta optimizada por Vite
             titleEl.textContent = data.title;
             descEl.textContent = data.description;
             linkEl.href = data.linkUrl;
@@ -118,5 +114,4 @@ const slides = [
             updateView(currentIndex);
         });
     </script>
-    
 </main>
